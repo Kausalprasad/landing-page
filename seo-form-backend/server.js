@@ -10,6 +10,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Create transporter for Zoho SMTP
+app.get('/api', function(req, res) {
+  res.send("hey");
+});
 const transporter = nodemailer.createTransport({
   host: 'smtp.zoho.com',
   port: 465,
